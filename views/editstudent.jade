@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    form#form_add_student(
+    action="/students/#{student.id}?_method=PUT", method="POST")
+        span Name
+        span &nbsp;
+        input#input_name(type="text", placeholder="name",
+        name="name", value='#{student.name}')
+        br
+        br
+        input#input_name(type="text", placeholder="last name",
+        name="last_name", value='#{student.last_name}')
+        button#submit_student(type="submit") submit

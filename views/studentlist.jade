@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h3.
+    Students
+  ul
+    each student, i in studentlist
+      li#student_list_item
+        a(href='/students/#{student._id}', name="#{student._id}") #{student.name}  #{student.last_name}
+
+  a(href='/students/new', method='get') Add new student

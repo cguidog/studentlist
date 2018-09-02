@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+    p #{student.name} #{student.last_name}
+    a(href='/students/#{student._id}/edit') Edit
+
+
+                <form action="/students/#{student.id}?_method=DELETE" method="POST">
+                <button >Delete</button>
+            </form>
