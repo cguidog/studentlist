@@ -30,7 +30,7 @@ app.get('/students', function(req, res){
 
       const db = database.db('test');
       
-      db.collection('students').find({}).toArray((err, result)=> {
+      db.collection('students').find({}).sort({name: -1}).toArray((err, result)=> {
         if (err) {
           res.send(err);
         } else if (result.length) {
